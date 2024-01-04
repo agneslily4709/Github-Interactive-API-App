@@ -1,8 +1,8 @@
 <div class="my-container">
         <div class="form-component">
                 <h3 class="form-title">SIGNUP</h3>
-                <input class="form-control" type="email" id="signin_email" placeholder="Enter email" #signin_email />
-                <input class="form-control" type="password" id="signin_password" placeholder="Enter password" #signin_password />
-                <button class="my-button">Signup</button>
+                <input class="form-control" type="email" id="signup_email" placeholder="Enter email" #signup_email />
+                <input class="form-control" type="password" id="signup_password" placeholder="Enter password" #signup_password />
+                <button class="my-button" (click)="handleSignUp(signup_email.value,signup_password.value)">Signup</button>
         </div>
 </div>

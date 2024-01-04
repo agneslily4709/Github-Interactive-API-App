@@ -3,6 +3,6 @@
                 <h3 class="form-title">SIGNIN</h3>
                 <input class="form-control" type="email" id="signin_email" placeholder="Enter email" #signin_email />
                 <input class="form-control" type="password" id="signin_password" placeholder="Enter password" #signin_password />
-                <button class="my-button">Signin</button>
+                <button class="my-button" (click)="handleSignIn(signin_email.value,signin_password.value)">Signin</button>
         </div>
 </div>

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signin',
@@ -7,4 +9,10 @@ import { Component } from '@angular/core';
 })
 export class SigninComponent {
 
+        constructor(public firebaseService: AuthService, private router:Router) {}
+
+        handleSignIn(email: string, password: string) {
+          this.firebaseService.signin(email, password);
+          this.router.navigate(["/"]);
+        }
 }
