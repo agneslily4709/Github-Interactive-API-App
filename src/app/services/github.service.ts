@@ -11,8 +11,9 @@ interface UserRepos{
         id:number;
         name:string;
         private:boolean;
-        url:string;
         html_url:string;
+        created_at:string;
+        clone_url:string;
 }
 
 @Injectable({
@@ -39,6 +40,7 @@ export class GithubService {
                 if (data.total_count === 1) {
                         this.userDetails = data.items[0];
                         this.userFound = true
+                        this.userDetailsError = null
                 }
 
                 else if (data.total_count > 1) 
@@ -66,8 +68,11 @@ export class GithubService {
                                 name: repo.name,
                                 private: repo.private,
                                 html_url: repo.html_url,
+                                created_at:repo.created_at,
+                                clone_url:repo.clone_url
                               }));
                               this.repoFound = true
+                              this.userReposError = null
                         }
                 else throw new Error(`No repos found for the given username.`);
               } catch (error) {

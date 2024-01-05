@@ -3,7 +3,25 @@
         padding: 20px;
         border-radius: 10px;
         background-color: var(--tertiary-color);
+        margin-bottom: 30px;
 }
 .repos{
         overflow-y:hidden;
+}
+.repo-card{
+        font-size: 12px;
+}
+.view-button{
+        background-color:red;
+        padding: 10px 5px;
+        border-radius: 20px;
+        color: var(--accent-color);
+        opacity: 0.8;
+}
+.clone-button{
+        background-color:green;
+        padding: 10px 5px;
+        border-radius: 20px;
+        color: var(--accent-color);
+        opacity: 0.8;
 }
