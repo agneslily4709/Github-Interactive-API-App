@@ -5,6 +5,7 @@
         color: var(--accent-color);
         opacity: 0.8;
         width: 200px;
+        height:50px;
 }
 .my-button:hover{
         opacity: 1;
@@ -15,6 +16,26 @@
         background-image: radial-gradient(var(--background-color-2),var(--background-color-1));
         height: 100vh;
 }
+.input-section{
+        height: 50px;
+}
 .home-component{
         margin-top: 100px;
+}
+.home{
+        display: grid;
+        grid-template-columns: 300px auto;
+        gap: 2rem;
+}
+@media screen and (max-width: 800px) {
+        .home{
+                display: grid;
+                grid-template-columns: auto;
+                gap: 1rem;
+                padding: 10px;
+        }       
+        .home-component{
+                margin-top: 80px;
+        }
+
 }

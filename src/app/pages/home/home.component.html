@@ -1,15 +1,16 @@
 <div class="my-home">
-        <div class="home-component container">
+        <div class="home-component container d-flex flex-column gap-3" >
                 <ng-container *ngIf="firebaseService.isLoggedIn; else signInMessage">
-                        <div class="d-flex gap-3">
+                        <div class="d-flex gap-3 input-section">
                                 <input type="text" class="form-control" placeholder="Search any username" #username/>
                                 <button class="my-button" (click)="handleSearch(username.value)">Search</button>
                         </div>
                         <div *ngIf="show">
-                                <div class="row py-3 mb-4">
-                                        <app-user-card class="col-md-3"></app-user-card>
-                                        <app-repos class="col-md-9"></app-repos>
-                                </div>  
+                                <div class="home">
+                                        <app-user-card></app-user-card>
+                                        <app-repos></app-repos>
+                                    </div>
+                                    
                         </div>
                 </ng-container>
         </div>

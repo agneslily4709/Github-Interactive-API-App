@@ -4,9 +4,7 @@
         border-radius: 10px;
         background-color: var(--tertiary-color);
         margin-bottom: 30px;
-}
-.repos{
-        overflow-y:hidden;
+        height: 65vh;
 }
 .repo-card{
         font-size: 12px;
@@ -16,6 +14,7 @@
         padding: 10px 5px;
         border-radius: 20px;
         color: var(--accent-color);
+        width: 100px;
         opacity: 0.8;
 }
 .clone-button{
@@ -23,5 +22,13 @@
         padding: 10px 5px;
         border-radius: 20px;
         color: var(--accent-color);
+        width: 100px;
         opacity: 0.8;
+}
+@media screen and (max-width: 800px) {
+        .view-button,.clone-button{
+                width: 75px;
+        }
+        .repos-component{
+        }
 }
