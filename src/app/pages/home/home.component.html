@@ -1,6 +1,7 @@
 <div class="my-container">
         <ng-container *ngIf="firebaseService.isLoggedIn; else signInMessage">
-                <p>Welcome Back</p>
+                <h4>Welcome Back</h4>
+                <p>{{userObject.email}}</p>
         </ng-container>
         <ng-template #signInMessage>
                 <p>You need to sign in</p>

@@ -7,6 +7,10 @@ import { AuthService } from '../../services/auth.service';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-        constructor(public firebaseService: AuthService) {}
 
+ userData = localStorage.getItem("user");
+ userObject = this.userData ? JSON.parse(this.userData) : null;
+ 
+        constructor(public firebaseService: AuthService) {
+        }
 }

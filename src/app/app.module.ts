@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { environment } from '../environment/environment';
 import { AuthService } from './services/auth.service';
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
+import { SignoutComponent } from './pages/signout/signout.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FIREBASE_OPTIONS } from '@angular/fire/compat';
     FooterComponent,
     SigninComponent,
     SignupComponent,
-    HomeComponent
+    HomeComponent,
+    SignoutComponent
   ],
   imports: [
     BrowserModule,
