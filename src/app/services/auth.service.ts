@@ -7,10 +7,12 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 export class AuthService {
 
         isLoggedIn = false;
-
+        username:string="";
         constructor(public firebaseAuth: AngularFireAuth) {
               const userFromLocalStorage = localStorage.getItem('user');
               this.isLoggedIn = !!userFromLocalStorage;
+              const userData = localStorage.getItem("user");
+              this.username = userData ? JSON.parse(userData).email : null;
         }
       
         async signin(email: string, password: string) {

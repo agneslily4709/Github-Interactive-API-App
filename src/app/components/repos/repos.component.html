@@ -1,0 +1,16 @@
+<div class="repos-component repos" *ngIf="githubService.userRepos && githubService.userRepos.length > 0">
+        <div class="mx-2">
+                <ul>
+                        <li *ngFor="let repo of githubService.userRepos">
+                           <p>Repo Name: {{ repo.name }}</p>
+                           <p>Repo ID: {{ repo.id }}</p>
+                          <p>Visibility: {{ repo.private ? 'Private' : 'Public' }}</p>
+                          <a type="button" class="btn btn-success" href="{{ repo.html_url }}" target="_blank">View</a> 
+                          <hr>
+                        </li>
+                </ul>
+        </div>
+</div>
+<p *ngIf="githubService.userReposError" class="error-message">
+        {{ githubService.userReposError }}
+ </p>

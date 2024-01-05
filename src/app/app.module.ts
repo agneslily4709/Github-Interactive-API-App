@@ -13,6 +13,8 @@ import { environment } from '../environment/environment';
 import { AuthService } from './services/auth.service';
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { SignoutComponent } from './pages/signout/signout.component';
+import { ReposComponent } from './components/repos/repos.component';
+import { UserCardComponent } from './components/user-card/user-card.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { SignoutComponent } from './pages/signout/signout.component';
     SigninComponent,
     SignupComponent,
     HomeComponent,
-    SignoutComponent
+    SignoutComponent,
+    ReposComponent,
+    UserCardComponent,
   ],
   imports: [
     BrowserModule,
