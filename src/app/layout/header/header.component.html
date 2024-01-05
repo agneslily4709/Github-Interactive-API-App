@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand-lg py-3 my-navbar fixed-top">
+        <div class="container">
+          <a class="navbar-brand my-navbar-item" routerLink="/">Github Interactive API App</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" style="color: white">↓↓↓</span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav ms-auto" *ngIf="(!firebaseService.isLoggedIn)">
+              <li class="nav-item"><a class="nav-link my-navbar-item" routerLink="/signup">SignUp</a></li>
+              <li class="nav-item"><a class="nav-link my-navbar-item" routerLink="/signin">SignIn</a></li>
+            </ul>
+            <ul class="navbar-nav ms-auto" *ngIf="(firebaseService.isLoggedIn)">
+                <li class="nav-item"><span class="badge bg-light text-dark fs-7 mt-2">{{firebaseService.username}}</span>
+                <li class="nav-item"><a class="nav-link my-navbar-item" routerLink="/signout">SignOut</a></li>
+              </ul>
+          </div>
+        </div>
+</nav>

@@ -1,0 +1,13 @@
+<div *ngIf="githubService.userFound && githubService.userDetails" class="user-card-component">
+        <div class="mx-2">
+                <img *ngIf="githubService.userDetails.avatar_url" [src]="githubService.userDetails.avatar_url" [alt]="githubService.userDetails.login"  class="avatar_img"/>
+                <div class="">
+                        <p>Username: {{ githubService.userDetails.login }}</p>
+                        <p>Used Id: {{githubService.userDetails.id}}</p>
+                </div>
+        </div>
+        
+</div>
+<p *ngIf="githubService.userDetailsError" class="error-message">
+        {{ githubService.userDetailsError }}
+</p>
