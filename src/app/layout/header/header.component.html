@@ -5,12 +5,14 @@
             <span class="navbar-toggler-icon" style="color: white">↓↓↓</span>
           </button>
           <div class="collapse navbar-collapse" id="navbarScroll">
-            <ul class="navbar-nav ms-auto">
-              <!-- <li class="nav-item"><a class="nav-link my-navbar-item" routerLink="/profile">Profile</a></li>
-              <li class="nav-item"><a class="nav-link my-navbar-item" routerLink="/signout">SignOut</a></li> -->
+            <ul class="navbar-nav ms-auto" *ngIf="(!firebaseService.isLoggedIn)">
               <li class="nav-item"><a class="nav-link my-navbar-item" routerLink="/signup">SignUp</a></li>
               <li class="nav-item"><a class="nav-link my-navbar-item" routerLink="/signin">SignIn</a></li>
             </ul>
+            <ul class="navbar-nav ms-auto" *ngIf="(firebaseService.isLoggedIn)">
+                <li class="nav-item"><a class="nav-link my-navbar-item" routerLink="/profile">Profile</a></li>
+                <li class="nav-item"><a class="nav-link my-navbar-item" routerLink="/signout">SignOut</a></li>
+              </ul>
           </div>
         </div>
 </nav>
