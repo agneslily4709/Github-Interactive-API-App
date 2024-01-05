@@ -2,13 +2,13 @@
         <div class="mx-2">
                 <ul>
                         <li *ngFor="let repo of githubService.userRepos" class="row">
-                                <div class="col-md-10">
+                                <div class="col-md-8">
                                         <p class="repo-card">Repo Name: {{ repo.name }}</p>
                                         <p class="repo-card">Repo ID: {{ repo.id }}</p>
                                         <p class="repo-card">Created At: {{ repo.created_at.substring(0, 10) }}</p>
                                         <p class="repo-card">Visibility: {{ repo.private ? 'Private' : 'Public' }}</p>
                                 </div>
-                                <div class="col-md-2 d-flex flex-column gap-3">
+                                <div class="col-md-4 d-flex flex-column gap-3">
                                         <a type="button" class="btn view-button" href="{{ repo.html_url }}" target="_blank">View</a> 
                                         <a type="button" class="btn clone-button" href="{{ repo.clone_url }}" target="_blank">Clone</a>
                                 </div>

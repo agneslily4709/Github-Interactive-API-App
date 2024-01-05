@@ -2,3 +2,20 @@
         background-color: var(--primary-color);
         color: var(--tertiary-color);
 }
+.socials{
+        display: flex;
+        gap: 2rem;
+}
+.footer-component{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+}
+@media screen and (max-width: 800px) {
+        .footer-component{
+                font-size: 15px;
+                flex-direction: column;
+        }
+
+}

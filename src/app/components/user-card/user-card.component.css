@@ -8,3 +8,12 @@
         height: 200px;
         width: 100%;
 }
+@media screen and (max-width: 800px) {
+        .avatar_img{
+                height: 300px;
+                width: 100%;
+        }
+        .user-card-component{
+                font-size: 14px;
+        }
+}
